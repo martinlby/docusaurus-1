@@ -31,7 +31,40 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: [ 'en','zh-Hans', 'zh-Hant','es','fr','ru','ar','pt-br','pt-pt'],
+    localeConfigs: {     
+      // 如果不需要重写默认值，可以忽略 locale (例如 fr)
+      en: {
+        htmlLang: 'en-GB',
+        path: 'en',
+      },
+      'zh-Hans': {
+        htmlLang: 'zh-CN',
+        path: 'zh-Hans',
+      },
+      'zh-Hant': {
+        htmlLang: 'zh-TW',
+      },
+      'es': {
+        htmlLang: 'es',
+      },
+      'fr': {
+        htmlLang: 'fr',
+      },
+      'ru': {
+        htmlLang: 'ru',
+      },
+      'ar': {
+        htmlLang: 'ar',
+        direction: 'rtl',
+      },
+      'pt-br': {
+        htmlLang: 'pt-BR',
+      },
+      'pt-pt': {
+        htmlLang: 'pt-PT',
+      },
+    },
   },
 
   presets: [
@@ -88,8 +121,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
