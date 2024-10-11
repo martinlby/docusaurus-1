@@ -1,7 +1,7 @@
 ---
 slug: first-blog-post
 title: First Blog Post
-authors: [a3, a1,a4,a5,a6,a7,a8,a9,a10,a11]
+authors: [slorber, yangshun]
 tags: [hola, docusaurus]
 ---
 

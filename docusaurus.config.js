@@ -8,19 +8,19 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'LadysVoa',
+  tagline: 'Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://lbykoo.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'lbykoo', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -76,8 +76,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+         // editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -87,8 +86,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        //  editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -107,10 +105,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'LadysVoa',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'LadysVoa Logo',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -120,6 +118,7 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blogsb', label: 'Blogsb', position: 'left'},
           {
             type: 'localeDropdown',
             position: 'right',
@@ -130,11 +129,48 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Information',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'About',
+                to: '/info/site-info/about',
+              },
+              {
+                label: 'Privacy Policy',
+                to: '/info/site-info/privacy-policy',
+              },
+              {
+                label: 'FAQ',
+                to: '/info/site-info/faq',
+              },
+              {
+                label: 'Contact Us',
+                to: '/info/site-info/contact',
+              },
+              {
+                label: 'Advertise with us',
+                to: '/info/site-info/ads',
+              },
+            ],
+          },
+          {
+            title: 'Submission Entrance',
+            items: [
+              {
+                label: 'Significance of Submissions',
+                to: '/info/submission/significance-of-submissions',
+              },
+              {
+                label: 'Submission Rules',
+                to: '/info/submission/submission-rules',
+              },
+              {
+                label: 'Submit prerequisites',
+                to: '/info/submission/submit-prerequisites',
+              },
+              {
+                label: 'How to Submit',
+                to: '/info/submission/how-to-submit',
               },
             ],
           },
@@ -169,13 +205,34 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright 2024 <a href="/">LadysVoa</a> All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
+    plugins: [
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'info', 
+          path: 'info', 
+          routeBasePath: 'info',
+          sidebarPath: require.resolve('./infosidebars.js'), 
+        },
+      ],
+      [
+        '@docusaurus/plugin-content-blog',
+        {
+          id: 'blogsb',
+          routeBasePath: 'blogsb', 
+          path: 'blogsb', 
+          blogTitle: 'My Blog', 
+          blogDescription: 'A blog about my projects', 
+        },
+      ],
+    ],
 };
 
 export default config;

@@ -28,3 +28,27 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+@font-face {
+  font-family: 'Y13';
+  src: url('Qumpellkano12-A6D2.otf');
+  /* IE9 Compat Modes */
+  src: url('Qumpellkano12-A6D2.otf') format('embedded-opentype'),
+      /* IE6-IE8 */
+      url('Qumpellkano12-A6D2.otf') format('woff'),
+      /* Modern Browsers */
+      url('Qumpellkano12-A6D2.otf') format('truetype'),
+      /* Safari, Android, iOS */
+      url('Qumpellkano12-A6D2.otf') format('svg');
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+.navbar__brand .navbar__title,header .hero__title{
+  font-family: "Y13";
+}
+.index--logo{
+  width:200px;
+}
+.hero--primary{
+  --ifm-hero-background-color: #a65da8;
+}
